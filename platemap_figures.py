@@ -124,7 +124,7 @@ def create_plate_layout(platemap, column_name, title, output_file,
     print(f"  ✓ Saved: {output_file}")
     plt.close()
 
-def generate_plate_figures(platemap_file, output_dir,
+def generate_plate_figures(platemap_file, output_dir, experiment,
                           sample_column='siRNA Sample',
                           primer_column='Primers',
                           well_column='Well'):
@@ -156,7 +156,7 @@ def generate_plate_figures(platemap_file, output_dir,
     platemap = pd.read_csv(platemap_file)
 
     # Generate sample layout
-    sample_output = output_dir / 'plate_layout_samples.png'
+    sample_output = output_dir / f'{experiment}_plate_layout_samples.png'
     create_plate_layout(
         platemap,
         sample_column,
@@ -166,7 +166,7 @@ def generate_plate_figures(platemap_file, output_dir,
     )
 
     # Generate primer layout
-    primer_output = output_dir / 'plate_layout_primers.png'
+    primer_output = output_dir / f'{experiment}_plate_layout_primers.png'
     create_plate_layout(
         platemap,
         primer_column,
