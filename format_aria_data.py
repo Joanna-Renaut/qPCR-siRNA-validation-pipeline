@@ -15,7 +15,7 @@ from platemap_figures import generate_plate_figures
 # ============================================================================
 
 # Input files
-aria_export_file = 'path-to-your-agilent-aria-data.xlsx' # .xlsx export from aria agilent software
+aria_export_file = 'path-to-your-file' # .xlsx export from aria agilent software
 platemap_template = 'qPCR_results_platemap.xlsx'  # filled in platemap .xlsx
 
 # Output dir
@@ -23,7 +23,8 @@ output_dir = Path('data')
 figures_dir = Path('plate_layouts')
 
 # Output file
-output_file = 'example.csv'
+experiment_name = 'name-of-your-experiment' # name of file saves
+output_file = f'{experiment_name}.csv'
 
 # Aria Excel sheet name
 aria_sheet_name = 'Tabular Results'
@@ -138,6 +139,7 @@ def format_aria_data(aria_file, template_file, output_file):
             sample_fig, primer_fig = generate_plate_figures(
                 output_path,  # Use the CSV output for figure generation
                 figures_dir,
+                experiment=experiment_name,
                 sample_column=platemap_sample_column,
                 primer_column=platemap_primer_column,
                 well_column=platemap_well_column
