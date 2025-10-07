@@ -1,7 +1,3 @@
-Here's an updated comprehensive README that explains both the preprocessing and analysis workflows:
-
----
-
 # RT-qPCR siRNA Validation Analysis
 
 Python pipeline for analyzing RT-qPCR data from siRNA knockdown experiments. Includes tools for importing Agilent Aria data and generating publication-quality analysis figures.
