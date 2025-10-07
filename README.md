@@ -404,9 +404,6 @@ Just fill the platemap template with your layout, and the scripts handle the res
 
 If you use this pipeline in your research, please acknowledge the tool and cite relevant publications from your lab.
 
-**Original R script**: Dr. Robert Zach  
-**Python conversion**: Joanna Renaut
-
 ---
 
 Last Updated: 7th October 2025
