@@ -25,7 +25,7 @@ path_results = Path('results')
 path_figures = Path('figures')
 
 # Generate output filename
-output_name = "sample_output" # output name for .csv results and figures (.png/.pdf)
+output_name = "name-of-experiment" # output name for .csv results and figures (.png/.pdf)
 
 # create results output
 os.makedirs(path_results, exist_ok=True)
